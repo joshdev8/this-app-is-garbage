@@ -41,20 +41,17 @@ export default function MyApp(props) {
 				<Head>
 					<meta name="viewport" content="initial-scale=1, width=device-width" />
 				</Head>
-				{/* <ThemeProvider theme={theme}> */}
 				<ThemeProvider
 					theme={isDarkTheme ? createTheme(dark) : createTheme(light)}
 				>
-					{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
 					<CssBaseline />
 					<div className="header-area">
 						<Header isDarkTheme={isDarkTheme} changeTheme={changeTheme} />
 					</div>
-					<Box sx={{ mt: '150px' }} className="component-area">
+					<Box sx={{ mt: '30px' }} className="component-area">
 						<Component {...pageProps} />
 					</Box>
 				</ThemeProvider>
-				{/* </ThemeProvider> */}
 			</>
 		</CacheProvider>
 	);

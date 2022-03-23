@@ -1,20 +1,23 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Link from 'src/components/Link';
+import { Container, Box, LinearProgress } from '@mui/material';
+import VirtualizedList from 'src/components/List/VirtualizedList';
+import useLoadItems from 'src/hooks/useLoadItems';
+import ErrorAlert from 'src/components/Alert/Error';
 
 export default function Index() {
+	const [items, error, loading] = useLoadItems({ term: 'this' });
+	let markup;
+	if (loading) {
+		markup = <LinearProgress />;
+	} else if (error) {
+		markup = <ErrorAlert message={error} />;
+	} else {
+		markup = <VirtualizedList items={items} />;
+	}
+
 	return (
 		<Container maxWidth="sm">
-			<Box sx={{ my: 4 }}>
-				<Typography variant="h4" component="h1" gutterBottom>
-					Next.js example
-				</Typography>
-				<Link href="/about" color="secondary">
-					Go to the about page
-				</Link>
-			</Box>
+			<Box sx={{ m: 2 }}>{markup}</Box>
 		</Container>
 	);
 }
