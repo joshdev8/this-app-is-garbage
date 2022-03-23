@@ -1,0 +1,10 @@
+/bin
+/build
+/dist
+/node_modules
+/src/polyfills
+/src/index.html
+build
+coverage
+*.html
+.next

@@ -1,3 +1,95 @@
 {
-  "extends": "next/core-web-vitals"
+	"extends": [
+		"next",
+		"next/core-web-vitals",
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"prettier"
+	],
+	"parserOptions": {
+		"ecmaVersion": 12,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"impliedStrict": true,
+			"jsx": true,
+			"experimentalObjectRestSpread": true
+		}
+	},
+	"rules": {
+		"react/react-in-jsx-scope": "off",
+		// Prefer single quotes for strings
+		"quotes": [
+			"error",
+			"single",
+			{
+				"avoidEscape": true
+			}
+		],
+		// Unused variables are errors. If intentionally unused, start the
+		// variable name with _ or unused-
+		"no-unused-vars": [
+			"warn",
+			{
+				"argsIgnorePattern": "^(_|unused-)"
+			}
+		],
+		// Use tabs and indent switch case statements
+		"no-tabs": 0,
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		// Use tabs in jsx
+		"react/jsx-indent": ["error", "tab"],
+		"react/jsx-indent-props": ["error", "tab"],
+		// We value consistency over the potential future performance gain
+		"react/prefer-stateless-function": ["off"],
+		// This is okay with us stylistically, so disable it
+		"no-else-return": ["off"],
+		// Use AirBNB's config except change the limit from 100 to 150 characters. That's
+		// roughly what will show on our laptop screen in a Sublime Text window.
+		"max-len": [
+			"error",
+			150,
+			2,
+			{
+				"ignoreUrls": true,
+				"ignoreComments": false
+			}
+		],
+		// This is okay with us stylistically, so disable it
+		"comma-dangle": ["warn", "always-multiline"],
+		// We use underscores in many places. We use them to turn off the unused var linter
+		// errors. We use them for our _links and _embedded hypermedia objects. We
+		// use them for internal url parameters. This is purely a stylistic rule, so
+		// disable it.
+		"no-underscore-dangle": ["off"],
+		"global-require": ["off"],
+		"react/jsx-no-bind": ["off"],
+		"semi": ["error", "always"]
+	},
+	"plugins": ["react"],
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true,
+		"jest": true
+	},
+	"globals": {
+		"React": "writable"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		},
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx"],
+				"paths": ["src"]
+			}
+		}
+	}
 }
