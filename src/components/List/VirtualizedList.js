@@ -21,10 +21,11 @@ const VirtualizedList = () => {
 	};
 
 	const filterMethod = (searchTerm, item) => {
-		const { itemTitle, tags } = item;
+		const { itemTitle, notes, disposalDescription } = item;
 		return (
 			itemTitle && itemTitle.toLowerCase().includes(searchTerm.toLowerCase())
-
+			|| notes && notes.toLowerCase().includes(searchTerm.toLowerCase())
+			|| disposalDescription && disposalDescription.toLowerCase().includes(searchTerm.toLowerCase())
 		);
 	};
 
@@ -46,7 +47,6 @@ const VirtualizedList = () => {
 			sx={{
 				width: '100%',
 				height: 500,
-				maxWidth: 700,
 				bgcolor: 'background.paper',
 			}}
 		>
@@ -65,7 +65,7 @@ const VirtualizedList = () => {
 							height={height}
 							itemCount={filteredItems.length}
 							items={filteredItems}
-							itemSize={200}
+							itemSize={300}
 							itemData={filteredItems}
 							width={width}
 						>
