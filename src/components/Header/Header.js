@@ -9,11 +9,9 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import ColorThemeToggle from 'src/components/Header/ColorThemeToggle';
+import ColorThemeToggle from 'components/Header/ColorThemeToggle';
 
-
-export default function Header({changeTheme, isDarkTheme}) {
-
+export default function Header({ changeTheme, isDarkTheme }) {
 	return (
 		<Box sx={{ flexGrow: 1 }}>
 			<AppBar position="static">

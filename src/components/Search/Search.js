@@ -16,20 +16,16 @@ const Search = ({ handleChange, handleClear, searchTerm }) => {
 				<ClearIcon fontSize="small" />
 			</IconButton>
 		) : (
-			<IconButton
-				edge="end"
-				aria-label="clear"
-				size="large"
-			>
+			<IconButton edge="end" aria-label="clear" size="large">
 				<SearchIcon fontSize="small" />
 			</IconButton>
 		);
-	
+
 	return (
 		<Box
 			sx={theme => ({
 				position: 'relative',
-				borderRadius: theme.shape.borderRadius,
+				// borderRadius: theme.shape.borderRadius,
 				backgroundColor: alpha(theme.palette.common.white, 0.15),
 				'&:hover': {
 					backgroundColor: alpha(theme.palette.common.white, 0.25),
@@ -63,9 +59,9 @@ const Search = ({ handleChange, handleClear, searchTerm }) => {
 				aria-describedby="search"
 				onChange={handleChange}
 				inputProps={{ 'aria-label': 'search' }}
-				endAdornment={
-					<InputAdornment position="end">{clearSearchIcon}</InputAdornment>
-				}
+				// endAdornment={
+				// 	<InputAdornment position="end">{clearSearchIcon}</InputAdornment>
+				// }
 				sx={theme => ({
 					color: 'inherit',
 					'& .MuiInputBase-input': {

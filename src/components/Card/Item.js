@@ -9,17 +9,18 @@ import {
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 
+import plasticCup from '../../../public/img/items/plastic-cup.webp';
 
 const Item = ({ item, index, style }) => {
-	const { Title, Year, Poster, imdbID } = item;
+	const { itemTitle, disposalDescription, cost, notes, tags } = item;
 	return (
 		<ListItem style={style} component="div" key={index} alignItems="flex-start">
 			<ListItemButton>
 				<ListItemAvatar>
-					<Image src={Poster} alt="cup image" width={75} height={100} />
+					<Image src={plasticCup} alt="cup image" width={75} height={100} />
 				</ListItemAvatar>
 				<ListItemText
-					primary={Title}
+					primary={itemTitle}
 					sx={{ ml: 2 }}
 					secondary={
 						<React.Fragment>
@@ -29,9 +30,27 @@ const Item = ({ item, index, style }) => {
 								variant="body2"
 								color="text.primary"
 							>
-								{Year}
+								Cost: {cost}
 								<br></br>
-								{imdbID}
+								{notes}
+							</Typography>
+						</React.Fragment>
+					}
+				/>
+				<ListItemText
+					primary={disposalDescription}
+					sx={{ ml: 2 }}
+					secondary={
+						<React.Fragment>
+							<Typography
+								sx={{ display: 'inline' }}
+								component="span"
+								variant="body2"
+								color="text.primary"
+							>
+								{notes && (
+									<span>Notes: {notes}</span>
+								)}
 							</Typography>
 						</React.Fragment>
 					}
@@ -43,15 +62,26 @@ const Item = ({ item, index, style }) => {
 
 Item.propTypes = {
 	item: PropTypes.shape({
-		Title: PropTypes.string,
-		Year: PropTypes.string,
-		Poster: PropTypes.string,
-		imdbID: PropTypes.string,
+		itemTitle: PropTypes.string,
+		disposalDescription: PropTypes.string,
+		cost: PropTypes.string,
+		notes: PropTypes.string,
+		tags: PropTypes.arrayOf(PropTypes.string),
+		disposalOptions: PropTypes.arrayOf(PropTypes.string),
 	}).isRequired,
 	index: PropTypes.number.isRequired,
-	style: PropTypes.shape({
-		
-	}).isRequired,
+	style: PropTypes.shape({}).isRequired,
+};
+
+Item.defaultProps = {
+	item: {
+		itemTitle: '',
+		disposalDescription: '',
+		cost: '',
+		notes: '',
+		tags: [],
+		disposalOptions: [],
+	},
 };
 
 export default Item;

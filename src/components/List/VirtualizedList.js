@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import { FixedSizeList as List } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';
-import PropTypes from 'prop-types';
-import Item from 'src/components/Card/Item';
-import Search from 'src/components/Search/Search';
+// import PropTypes from 'prop-types';
+import Item from 'components/Card/Item';
+import Search from 'components/Search/Search';
+import items from '../../../data/items';
 
-
-const VirtualizedList = ({ items }) => {
+const VirtualizedList = () => {
 	const [filteredItems, setFilteredItems] = useState(items);
 	const [searchTerm, setSearchTerm] = useState('');
 
@@ -21,10 +21,10 @@ const VirtualizedList = ({ items }) => {
 	};
 
 	const filterMethod = (searchTerm, item) => {
-		const { Title } = item;
+		const { itemTitle, tags } = item;
 		return (
-			Title &&
-			Title.toLowerCase().includes(searchTerm.toLowerCase())
+			itemTitle && itemTitle.toLowerCase().includes(searchTerm.toLowerCase())
+
 		);
 	};
 
@@ -39,7 +39,7 @@ const VirtualizedList = ({ items }) => {
 		} else {
 			setFilteredItems(items);
 		}
-	}, [searchTerm, items]);
+	}, [searchTerm]);
 
 	return (
 		<Box
@@ -53,7 +53,7 @@ const VirtualizedList = ({ items }) => {
 			<AutoSizer>
 				{({ height, width }) => (
 					<>
-						<Box sx={{ width: width}}>
+						<Box sx={{ width: width }}>
 							<Search
 								handleChange={handleChange}
 								handleClear={handleClear}
@@ -65,7 +65,7 @@ const VirtualizedList = ({ items }) => {
 							height={height}
 							itemCount={filteredItems.length}
 							items={filteredItems}
-							itemSize={125}
+							itemSize={200}
 							itemData={filteredItems}
 							width={width}
 						>
@@ -79,14 +79,6 @@ const VirtualizedList = ({ items }) => {
 			</AutoSizer>
 		</Box>
 	);
-};
-
-VirtualizedList.propTypes = {
-	items: PropTypes.arrayOf(PropTypes.shape({})),
-};
-
-VirtualizedList.defaultProps = {
-	items: [],
 };
 
 export default VirtualizedList;
