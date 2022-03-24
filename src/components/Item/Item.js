@@ -46,7 +46,12 @@ const Item = ({ item, index, style }) => {
 			>
 				<ListItemButton>
 					<ListItemAvatar>
-						<Image src={placeholderImage} alt="item image" width={75} height={75} />
+						<Image
+							src={placeholderImage}
+							alt="item image"
+							width={75}
+							height={75}
+						/>
 					</ListItemAvatar>
 					<ListItemText
 						primary={itemTitle}

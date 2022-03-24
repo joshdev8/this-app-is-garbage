@@ -28,7 +28,7 @@ export default function Find() {
 					<Grid item xs={4}>
 						<Box sx={{ m: 2 }}>
 							<RadioButtons
-								label='Material Type?'
+								label="Material Type?"
 								options={materialOptions}
 								handleChange={setMaterial}
 								value={material}
@@ -37,7 +37,7 @@ export default function Find() {
 						{material === 'Food' && (
 							<Box sx={{ m: 2 }}>
 								<RadioButtons
-									label='Meat or Animal Bones?'
+									label="Meat or Animal Bones?"
 									options={['Yes', 'No']}
 									handleChange={setMeatOrAnimal}
 									value={meatOrAnimal}
@@ -48,12 +48,17 @@ export default function Find() {
 					<Grid item xs={8}>
 						{meatOrAnimal === 'Yes' && material === 'Food' && (
 							<Box sx={{ m: 2 }}>
-								Meat and bones are compostable, but should not be put in a backyard compost pile because it can attract unwanted pests and is difficult to break down.  Drop meat/bones off at a CSWD transfer station or Green Mountain Compost.
+								Meat and bones are compostable, but should not be put in a
+								backyard compost pile because it can attract unwanted pests and
+								is difficult to break down. Drop meat/bones off at a CSWD
+								transfer station or Green Mountain Compost.
 							</Box>
 						)}
 						{meatOrAnimal === 'No' && material === 'Food' && (
 							<Box sx={{ m: 2 }}>
-								Food other than meat and bones can go in a backyard compost bin.  It can also be dropped off at a CSWD transfer station or at Green Mountain Compost.
+								Food other than meat and bones can go in a backyard compost bin.
+								It can also be dropped off at a CSWD transfer station or at
+								Green Mountain Compost.
 							</Box>
 						)}
 					</Grid>

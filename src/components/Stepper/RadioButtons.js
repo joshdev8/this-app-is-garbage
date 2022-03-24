@@ -6,8 +6,12 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import PropTypes from 'prop-types';
 
-const ControlledRadioButtonsGroup = ({ label, options, handleChange, value }) => {
-
+const ControlledRadioButtonsGroup = ({
+	label,
+	options,
+	handleChange,
+	value,
+}) => {
 	const handleOnChange = event => {
 		handleChange(event.target.value);
 	};
