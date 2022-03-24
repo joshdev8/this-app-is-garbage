@@ -26,7 +26,7 @@ const Item = ({ item, index, style }) => {
 	const { itemTitle, disposalDescription } = item;
 	// trim description down to 300 characters so it fits in list card
 	const truncatedDescription = disposalDescription
-		? truncateString(disposalDescription, 100)
+		? truncateString(disposalDescription, 60)
 		: '';
 	// format itemTitle so we can pass it reliably as a query param
 	const titleWithoutSpaces = itemTitle
