@@ -23,7 +23,7 @@ const TopNav = ({ colorInvert = false }) => {
 				</Link>
 			</Box>
 			<Box marginRight={{ xs: 1, sm: 2 }}>
-				<Link href="/about" to="/about" passHref underline="none">
+				<Link href="/find" to="/find" passHref underline="none">
 					<Button
 						sx={{
 							color: colorInvert ? 'common.white' : 'text.primary',
@@ -31,7 +31,7 @@ const TopNav = ({ colorInvert = false }) => {
 							alignItems: 'center',
 						}}
 					>
-						About
+						Can&apos;t find an item?
 					</Button>
 				</Link>
 			</Box>

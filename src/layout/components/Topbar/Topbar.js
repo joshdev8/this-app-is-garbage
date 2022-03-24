@@ -27,9 +27,9 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
 				href="/"
 				passHref
 				title="This App is Garbage 2.0"
-				width={{ xs: 100, md: 120 }}
+				width={{ xs: 100, md: 120, lg: 230 }}
 			>
-				<Box component={Image} src={transparentLogo} height={1} width={1} />
+				<Box component={Image} src={transparentLogo} height={1} width={230} />
 			</Box>
 			<Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
 				<Box>
