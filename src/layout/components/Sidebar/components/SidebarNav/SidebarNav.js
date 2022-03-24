@@ -19,14 +19,8 @@ const SidebarNav = ({ pages }) => {
 					href="/"
 					title="This app is Garbage"
 					width={{ xs: 210, md: 120 }}
-
 				>
-					<Box
-						component={Image}
-						src={transparentLogo}
-						height={1}
-						width={1}
-					/>
+					<Box component={Image} src={transparentLogo} height={1} width={1} />
 				</Box>
 			</Box>
 			<Box paddingX={2} paddingY={2}>

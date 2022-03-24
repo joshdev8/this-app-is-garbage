@@ -8,7 +8,6 @@ import Image from 'next/image';
 import transparentLogo from '../../../../public/img/logoTransparent.webp';
 
 const Footer = () => {
-
 	return (
 		<Grid container spacing={2}>
 			<Grid item xs={12}>
@@ -26,12 +25,7 @@ const Footer = () => {
 						title="theFront"
 						width={80}
 					>
-						<Box
-							component={Image}
-							src={transparentLogo}
-							height={1}
-							width={1}
-						/>
+						<Box component={Image} src={transparentLogo} height={1} width={1} />
 					</Box>
 					<Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
 						<Box marginTop={1} marginRight={2}>

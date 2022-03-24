@@ -57,7 +57,7 @@ const getTheme = (mode, themeToggler) =>
 				},
 			},
 			themeToggler,
-		}),
+		})
 	);
 
 export default getTheme;

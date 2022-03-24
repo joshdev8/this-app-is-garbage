@@ -12,10 +12,7 @@ import { NavItem } from './components';
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
 	const theme = useTheme();
-	const {
-		recycling,
-		composting,
-	} = pages;
+	const { recycling, composting } = pages;
 
 	return (
 		<Box

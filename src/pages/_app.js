@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		  />
+				/>
 				<title>This app is garbage 2.0.</title>
 			</Head>
 			<Page>
@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
 		</React.Fragment>
 	);
 }
-  
+
 App.propTypes = {
 	Component: PropTypes.elementType.isRequired,
 	pageProps: PropTypes.object.isRequired,

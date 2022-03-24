@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import { FixedSizeList as List } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';
 // import PropTypes from 'prop-types';
-import Item from 'components/Card/Item';
+import Item from 'components/Item/Item';
 import Search from 'components/Search/Search';
 import items from '../../../data/items';
 
@@ -23,9 +23,11 @@ const VirtualizedList = () => {
 	const filterMethod = (searchTerm, item) => {
 		const { itemTitle, notes, disposalDescription } = item;
 		return (
-			itemTitle && itemTitle.toLowerCase().includes(searchTerm.toLowerCase())
-			|| notes && notes.toLowerCase().includes(searchTerm.toLowerCase())
-			|| disposalDescription && disposalDescription.toLowerCase().includes(searchTerm.toLowerCase())
+			(itemTitle &&
+				itemTitle.toLowerCase().includes(searchTerm.toLowerCase())) ||
+			(notes && notes.toLowerCase().includes(searchTerm.toLowerCase())) ||
+			(disposalDescription &&
+				disposalDescription.toLowerCase().includes(searchTerm.toLowerCase()))
 		);
 	};
 
@@ -65,7 +67,7 @@ const VirtualizedList = () => {
 							height={height}
 							itemCount={filteredItems.length}
 							items={filteredItems}
-							itemSize={300}
+							itemSize={125}
 							itemData={filteredItems}
 							width={width}
 						>
