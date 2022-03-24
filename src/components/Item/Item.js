@@ -4,14 +4,13 @@ import {
 	ListItemButton,
 	ListItemText,
 	ListItemAvatar,
-	Typography,
 	Box,
 } from '@mui/material';
 import Link from 'components/Link';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 
-import plasticCup from '../../../public/img/items/plastic-cup.webp';
+import placeholderImage from '../../../public/img/items/placeholder.jpeg';
 
 const truncateString = (str, n) => {
 	if (!str) {
@@ -25,10 +24,11 @@ const truncateString = (str, n) => {
 
 const Item = ({ item, index, style }) => {
 	const { itemTitle, disposalDescription } = item;
+	// trim description down to 300 characters so it fits in list card
 	const truncatedDescription = disposalDescription
-		? truncateString(disposalDescription, 300)
+		? truncateString(disposalDescription, 100)
 		: '';
-
+	// format itemTitle so we can pass it reliably as a query param
 	const titleWithoutSpaces = itemTitle
 		? itemTitle.replace(/\s/g, '-').toLowerCase()
 		: '';
@@ -41,10 +41,12 @@ const Item = ({ item, index, style }) => {
 					query: { itemId: titleWithoutSpaces },
 				}}
 				passHref
+				sx={{ width: '100%' }}
+				underline="none"
 			>
 				<ListItemButton>
 					<ListItemAvatar>
-						<Image src={plasticCup} alt="cup image" width={75} height={100} />
+						<Image src={placeholderImage} alt="item image" width={75} height={75} />
 					</ListItemAvatar>
 					<ListItemText
 						primary={itemTitle}
