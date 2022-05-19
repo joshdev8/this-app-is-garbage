@@ -16,7 +16,7 @@ const materialOptions = [
 	'Mixed Material',
 ];
 
-//TODO: this is sloppy as hell, need to update this when I have more time
+// TODO: this is sloppy as hell, need to update this when I have more time
 export default function Find() {
 	const [material, setMaterial] = React.useState('');
 	const [meatOrAnimal, setMeatOrAnimal] = React.useState(null);
