@@ -7,7 +7,7 @@ export default function Contact() {
 	return (
 		<Container>
 			<Main>
-				<Box sx={{ m: 2 }}>This is the contact page</Box>
+				<Box sx={{ m: 2 }}>This is the contact page asdf</Box>
 			</Main>
 		</Container>
 	);

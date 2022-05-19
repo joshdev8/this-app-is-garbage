@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "jest --watch",
     "pretty": "prettier --use-tabs --single-quote --write \"**/*.{js,jsx}\""
   },
   "dependencies": {
@@ -26,6 +27,8 @@
     "react-window": "^1.8.6"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.5",
     "eslint": "8.11.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "12.1.0",
@@ -33,6 +36,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
+    "jest": "^27.0.6",
     "prettier": "^2.6.0",
     "prettier-cli": "^0.1.0",
     "prettier-eslint": "^13.0.0",

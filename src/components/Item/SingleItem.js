@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-	ListItem,
-	ListItemButton,
-	ListItemText,
-	ListItemAvatar,
-	Typography,
-	Box,
-} from '@mui/material';
+import { Box } from '@mui/material';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import trashCan from '../../../public/img/trash.webp';
@@ -75,10 +68,11 @@ const Item = ({ item }) => {
 		positiveWordArray: TRASH_WORDS,
 		negativeWordArray: TRASH_FORBIDDEN_WORDS,
 	});
-	const tagArray = [compostable, recyclable, trashable];
+
 	const trashImage = trashable ? (
 		<Image alt="trash can image" src={trashCan} height={100} width={100} />
 	) : null;
+
 	const recyclingImage = recyclable ? (
 		<Image
 			alt="recycling bin image"
@@ -87,10 +81,11 @@ const Item = ({ item }) => {
 			width={100}
 		/>
 	) : null;
+
 	const compostImage = compostable ? (
 		<Image alt="compost bin image" src={compostBin} height={100} width={100} />
 	) : null;
-	console.log('tagArray: ', tagArray);
+
 	return (
 		<>
 			<Box>{itemTitle}</Box>
