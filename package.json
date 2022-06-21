@@ -16,7 +16,7 @@
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.5.1",
-    "@mui/material": "^5.5.1",
+    "@mui/material": "^5.8.5",
     "aos": "^2.3.4",
     "axios": "^0.26.1",
     "next": "12.1.6",
