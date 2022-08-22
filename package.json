@@ -16,7 +16,7 @@
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.9.1",
+    "@mui/material": "^5.10.1",
     "aos": "^2.3.4",
     "axios": "^0.27.2",
     "next": "12.2.3",
@@ -31,7 +31,7 @@
     "@testing-library/react": "^12.1.5",
     "eslint": "8.20.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "12.2.2",
+    "eslint-config-next": "12.2.5",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsx-a11y": "^6.6.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -40,6 +40,6 @@
     "prettier": "^2.7.1",
     "prettier-cli": "^0.1.0",
     "prettier-eslint": "^15.0.0",
-    "prettier-eslint-cli": "^6.0.1"
+    "prettier-eslint-cli": "^7.0.0"
   }
 }
