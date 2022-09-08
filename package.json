@@ -11,7 +11,7 @@
     "pretty": "prettier --use-tabs --single-quote --write \"**/*.{js,jsx}\""
   },
   "dependencies": {
-    "@emotion/cache": "^11.7.1",
+    "@emotion/cache": "^11.10.3",
     "@emotion/react": "^11.9.3",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.4",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.5",
-    "eslint": "8.20.0",
+    "eslint": "8.23.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "12.2.5",
     "eslint-config-prettier": "^8.5.0",
