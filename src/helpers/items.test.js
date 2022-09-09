@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { findItemByItemTitle, getAllItemIds } from './items';
 // created a smaller subset of the item data for testing (instead of passing in the giant list of actual data)
 import mockItems from '../../test/mock-data';
@@ -56,7 +57,6 @@ describe('Helpers: items.js', () => {
 		// we may want to change the behavior of this helper function to avoid null/undefined values if it doesn't find an item
 		expect(itemFound).toEqual(undefined);
 	});
-
 
 	it('getAllItemIds returns expected item list', () => {
 		const allItems = getAllItemIds(mockItems);

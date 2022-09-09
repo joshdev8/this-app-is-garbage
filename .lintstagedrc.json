@@ -1,0 +1,11 @@
+{
+	"*.+(js|jsx)": [
+		"npm run verify-node-version",
+		"npm run pretty",
+		"npm run staged-pretty-js",
+		"npm run test:ci",
+		"git add ."
+	],
+	"*.+(json)": ["npm run staged-pretty-js", "git add ."],
+	"*.+(css|scss)": ["npm run staged-pretty-css", "git add ."]
+}
