@@ -34,7 +34,7 @@
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.6",
-    "@mui/material": "^5.10.6",
+    "@mui/material": "^5.10.8",
     "aos": "^2.3.4",
     "axios": "^1.0.0",
     "jest-environment-jsdom": "^29.0.3",
